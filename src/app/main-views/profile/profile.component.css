@@ -1,0 +1,62 @@
+.container {
+  background-color: #93e3f5;
+  margin: auto;
+  padding: 2%;
+}
+
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  color: #c4c2c2;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+ul.breadcrumb li + li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+
+.text {
+  text-align: center;
+}
+
+.image-profile {
+  text-align: center;
+}
+
+.image-profile img {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.content-episodes {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.content-episodes .episodes {
+  width: 10%;
+  margin: auto;
+  text-align: center;
+}
+
+.content-episodes .episodes:hover {
+  cursor: pointer;
+  background-color: #0275d8;
+  color: white;
+}

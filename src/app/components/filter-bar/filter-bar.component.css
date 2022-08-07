@@ -1,0 +1,25 @@
+.content-bar {
+  padding: 1%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gender{
+  margin-left: 2%;
+}
+
+.gender select{
+  margin: auto;
+  border-radius: 4px;
+  border: 2px solid #00b4cc;
+}
+
+.status{
+  margin-left: 2%;
+}
+
+.status select{
+  margin: auto;
+  border-radius: 4px;
+  border: 2px solid #00b4cc;
+}

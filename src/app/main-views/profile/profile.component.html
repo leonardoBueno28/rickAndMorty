@@ -1,0 +1,28 @@
+<div class="breadcrumb">
+  <ul class="breadcrumb">
+    <li><a routerLink="/">Home</a></li>
+    <li>{{character?.name}}</li>
+  </ul>
+</div>
+
+<div class="container">
+  <div class="content">
+    <div class="card">
+      <div class="image-profile">
+        <img [src]="character?.image" alt="{{character?.name}}">
+      </div>
+      <div class="text">
+        <h4>{{character?.name}}</h4>
+        <p><strong>Genero:</strong> {{character?.gender}}</p>
+        <p><strong>Especie:</strong> {{character?.species}}</p>
+        <p><strong>Estado:</strong> {{character?.status}}</p>
+      </div>
+      <h1><strong>Episodios:</strong></h1>
+      <div class="content-episodes">
+        <div class="episodes" *ngFor="let episode of character?.episode; let i = index">
+          <p>Episodio {{i + 1}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="content-bar">
+  <div class="gender">
+    <h4>Género</h4>
+    <select name="gender" id="gender" [(ngModel)]="genders" (change)="onSelectGender()">
+      <option *ngFor="let gender of gendersOptions" [value]="gender.value">
+        {{ gender.name }}
+      </option>
+    </select>
+  </div>
+  <div class="status">
+    <h4>Estado</h4>
+    <select name="status" id="status" [(ngModel)]="status" (change)="onSelectStatus()">
+      <option *ngFor="let statu of statusOptions" [value]="statu.value">
+        {{ statu.name }}
+      </option>
+    </select>
+  </div>
+</div>

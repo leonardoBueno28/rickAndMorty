@@ -1,0 +1,58 @@
+<div class="content-search">
+  <div class="wrap">
+    <div class="search">
+      <input
+        type="text"
+        class="searchTerm"
+        placeholder="Buscar personaje..."
+        (keyup.enter)="search()"
+        [(ngModel)]="searchText"
+      />
+      <button type="submit" class="searchButton" (click)="search()">
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+    <div class="content-filter">
+      <app-filter-bar
+        (filterGender)="search($event)"
+        (filterStatus)="search($event)"
+      ></app-filter-bar>
+    </div>
+  </div>
+</div>
+
+<div class="content-loader" *ngIf="loading">
+  <div class="lds-roller">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
+<div
+  class="container container-scroll"
+  infiniteScroll
+  [infiniteScrollDistance]="1"
+  (scrolled)="onScroll()"
+>
+  <div class="content">
+    <div class="m-12" *ngIf="!loading">
+      <div
+        class="card"
+        *ngFor="let character of characters"
+        (click)="goTo(character.id)"
+      >
+        <img [src]="character.image" alt="{{ character.name }}" />
+        <div class="content-card">
+          <h4>{{ character.name }}</h4>
+          <p>{{ character.origin.name }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
